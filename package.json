@@ -37,8 +37,8 @@
   ],
   "scripts": {
     "gen-dts": "find . -type f -name '*.d.ts' -not -path './node_modules/*' -delete && tsc -d --emitDeclarationOnly --allowJs index.js",
-    "version": "auto-changelog -p && git add CHANGELOG.md && git push",
-    "postversion": "git push --tags"
+    "version": "auto-changelog -p && git add CHANGELOG.md",
+    "postversion": "git push && git push --tags"
   },
   "publishConfig": {
     "access": "public"
