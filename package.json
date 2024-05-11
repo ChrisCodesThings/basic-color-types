@@ -3,9 +3,14 @@
   "version": "0.1.0",
   "description": "Defines named types for common color formats",
   "keywords": [
-    "stub",
-    "package",
-    "template"
+    "jsdoc",
+    "typescript",
+    "color",
+    "type",
+    "definition",
+    "css",
+    "rgb",
+    "rgba"
   ],
   "repository": {
     "type": "git",
