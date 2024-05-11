@@ -1,16 +1,14 @@
-# stub-repo <br> [![Test workflow status](https://github.com/ChrisCodesThings/stub-repo/actions/workflows/test.yml/badge.svg)](../../actions/workflows/test.yml) [![NPM Version](https://img.shields.io/npm/v/@chriscodesthings/stub-repo)](https://www.npmjs.com/package/@chriscodesthings/stub-repo) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+# basic-color-types <br> [![NPM Version](https://img.shields.io/npm/v/@chriscodesthings/basic-color-types)](https://www.npmjs.com/package/@chriscodesthings/basic-color-types) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-> **npm package template**
+> **Defines named types for common color formats**
 
 ## Description
 
-Does what it says on the tin.
+Provides named types for common color formats.
 
 ### See...
-- [Install/Usage](#install "Install and Usage")
+- [Install](#install "Install")
 - [Types](#types "Types")
-- [Syntax](#syntax "Syntax")
-- [Examples](#examples "Examples")
 - [See Also](#see-also "See Also")
 
 ---
@@ -18,16 +16,7 @@ Does what it says on the tin.
 ## Install
 
 ```sh
-npm install --save @chriscodesthings/stub-repo
-```
-
-## Usage
-
-```js
-import stubRepo from '@chriscodesthings/stub-repo';
-
-console.log(stubRepo("hello world!"));
-// => true
+npm install --save @chriscodesthings/basic-color-types
 ```
 
 ## Types
@@ -35,7 +24,9 @@ console.log(stubRepo("hello world!"));
 These types are made available:
 
 ```ts
-export type myType = any;
+export type CSSHexCode = string;
+export type rgbColor = [number, number, number];
+export type rgbaColor = [number, number, number, number];
 ```
 
 ### TypeScript
@@ -43,9 +34,9 @@ export type myType = any;
 To use the types in your TypeScript project:
 
 ```js
-import type { myType } from '@chriscodesthings/stub-repo';
+import type { rgbColor } from '@chriscodesthings/basic-color-types';
 
-const myColor: myType = "foo";
+const myColor: rgbColor = [100, 149, 237];
 ```
 
 ### JavaScript
@@ -54,36 +45,15 @@ You can also use types in JavaScript with JSDoc with `@typedef` imports:
 
 ```js
 /**
- * @typedef {import('@chriscodesthings/stub-repo').myType} myType
+ * @typedef {import('@chriscodesthings/basic-color-types').rgbaColor} rgbaColor
  */
 
-/** @type {myType} */
+/** @type {rgbaColor} */
 const myColor = [100, 149, 237, 1];
-```
-
-## Syntax
-
-```js
-stubRepo(var);
-```
-
-### Parameters
-
-- *var*: any
-
-### Return Value
-
-Returns something probably.
-
-## Examples
-
-```js
-// This is how you could use this in your code. 
 ```
 
 ## See Also...
 
-- [**stub-repo**: npm package template](https://github.com/ChrisCodesThings/stub-repo "npm package template")
-- [**stub-repo**: npm package template](https://github.com/ChrisCodesThings/stub-repo "npm package template")
-- [**stub-repo**: npm package template](https://github.com/ChrisCodesThings/stub-repo "npm package template")
-- [**stub-repo**: npm package template](https://github.com/ChrisCodesThings/stub-repo "npm package template")
+- [**color-object**: Simple, lightweight class to store and manipulate a color, and convert between formats](https://github.com/ChrisCodesThings/color-object "Simple, lightweight class to store and manipulate a color, and convert between formats")
+- [**is-css-hex-color**: Determine if a string is a CSS hex color code](https://github.com/ChrisCodesThings/is-css-hex-color "Determine if a string is a CSS hex color code")
+- [**color-looks-like-rgba**: Determine if a set of values could be an RGB or RGBA color](https://github.com/ChrisCodesThings/color-looks-like-rgba "Determine if a set of values could be an RGB or RGBA color")
