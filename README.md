@@ -24,7 +24,7 @@ npm install --save @chriscodesthings/basic-color-types
 These types are made available:
 
 ```ts
-export type CSSHexCode = string;
+export type cssHexCode = string;
 export type rgbColor = [number, number, number];
 export type rgbaColor = [number, number, number, number];
 ```
